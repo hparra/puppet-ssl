@@ -31,12 +31,12 @@
 #   Aaron Russo <arusso@berkeley.edu>
 define ssl::cert(
   $cn = $name,
-  $country = params_lookup( 'country', false ),
-  $state = params_lookup( 'state', false ),
-  $city = params_lookup( 'city', false ),
-  $org = params_lookup( 'org', false),
-  $org_unit = params_lookup( 'org_unit', false),
-  $alt_names = params_lookup( 'alt_names', false)
+  $country = 'US',
+  $state = 'CA',
+  $city = 'San Francisco',
+  $org = '',
+  $org_unit = '',
+  $alt_names = []
 ) {
   include ssl
   include ssl::params
